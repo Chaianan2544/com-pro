@@ -60,7 +60,11 @@ float withd()
 	int dec;
 	cout<<"Enter Your Withdraw Money : ";
 	cin>>dec;
+	if(balance>=dec){
 	cout<<"Your Total Balance is "<<balance-dec<<endl;
+	}
+	else
+	cout<<"Your don't have enough balance to withdraw"<<endl;
 	balance=balance-dec;
 	return(dec);
 }
