@@ -62,9 +62,9 @@ float withd()
 	cin>>dec;
 	if(balance>=dec){
 	cout<<"Your Total Balance is "<<balance-dec<<endl;
+	balance=balance-dec;
 	}
 	else
 	cout<<"Your don't have enough balance to withdraw"<<endl;
-	balance=balance-dec;
 	return(dec);
 }
