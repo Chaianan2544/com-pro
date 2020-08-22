@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 int balance1, balance2;
-int ID1, ID2, IDn1, IDn2;
+int ID1, ID2, IDn1;
 float regis();
 float depo();
 float withd();
@@ -16,8 +16,9 @@ int main()
 	    cout<<"\n2.Deposite";
 		cout<<"\n3.Withdraw";
 		cout<<"\n4.ShowBalance";
+		cout<<"\n5.Transfer";
 	    cout<<"\n0.Exit";
-	    cout<<"\nChoose Option [0-4] : ";
+	    cout<<"\nChoose Option [0-5] : ";
 	    cin>>cash;
 
 	switch(cash){
@@ -43,7 +44,7 @@ int main()
 		cout<<"Exit Program"<<endl;
 		break;
 	default :
-		cout<<"Please input 0, 1, 2, 0"<<endl;
+		cout<<"Please input 0, 1, 2, 3, 4, 5"<<endl;
 		break;}
 	}
 	while(cash!=0);
@@ -117,33 +118,46 @@ float withd()
 float show()
 {
 	cout<<"Show Balance All Account"<<endl;
-	cout<<"Your account 1 total balance is "<<balance1<<endl;
-	cout<<"Your account 2 total balance is "<<balance2<<endl;
+	cout<<"Your account ID:"<<ID1<<" total balance is "<<balance1<<endl;
+	cout<<"Your account ID:"<<ID2<<" total balance is "<<balance2<<endl;
 	return(balance1, balance2);
 }
 float trans()
 {
-	int tran;
+	int transfer;
 	cout<<"Enter your ID number : ";
 	cin>>IDn1;
-	if(IDn1==ID1)
-	{
-	cout<<"Enter Money you want to transfer to ID:"<<ID2<<" : ";
-	cin>>tran;
-	cout<<"You have transfer "<<tran<<endl;
-	cout<<"Your Remaining Balance is "<<balance1-tran<<endl;
-	balance1=balance1-tran;
-	balance2=balance2+tran;
+	if(IDn1==ID1){
+		cout<<"Enter Money you want to transfer to ID:"<<ID2<<" : ";
+		cin>>transfer;
+		if(transfer<=balance1)
+		{
+			cout<<"You have transfered "<<transfer<<" to ID:"<<ID2<<endl;
+			cout<<"Your remaining balance is "<<balance1-transfer<<endl;
+			balance1=balance1-transfer;
+			balance2=balance2+transfer;
+		}
+		else
+		{
+			cout<<"Your remaining balance is not enough to transfer"<<endl;
+		}
 	}
-	else if(IDn1==ID2)
-	{cout<<"Enter Money you want to transfer to ID:"<<ID1<<" : ";
-	cin>>tran;
-	cout<<"You have transfer "<<tran<<endl;
-	cout<<"Your Remaining Balance is "<<balance2-tran<<endl;
-	balance2=balance2-tran;
-	balance1=balance1+tran;
+	else if(IDn1==ID2){
+		cout<<"Enter Money you want to transfer to ID:"<<ID1<<" : ";
+		cin>>transfer;
+		if(transfer<=balance2)
+		{
+			cout<<"You have transfered "<<transfer<<" to ID:"<<ID1<<endl;
+			cout<<"Your remaining balance is "<<balance2-transfer<<endl;
+			balance2=balance2-transfer;
+			balance1=balance1+transfer;
+		}
+		else
+		{
+			cout<<"Your remaining balance is not enough to transfer"<<endl;
+		}
 	}
-	else
-		cout<<"ID not found "<<endl;
+	else{
+		cout<<"ID not found "<<endl;}
 	return(0);
 }
