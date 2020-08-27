@@ -3,8 +3,11 @@
 using namespace std;
 int main(void)
 {
+
+	/*
+	//gues the random number
 	srand(time(NULL));
-	int rn =rand()%10;
+	int rn =rand()%101;
 	int mn;
 	int n=0;
 	do
@@ -16,6 +19,7 @@ int main(void)
 		{
 			cout<<"random number is "<<rn<<endl;
 			cout<<"Yep same"<<endl;
+			cout<<"You did it in "<<n<<" time!"<<endl;
 		}
 		else if(mn>rn)
 		{
@@ -26,16 +30,8 @@ int main(void)
 	}
 	while(mn!=rn);
 	cout<<"Exit program"<<endl;
-
-
-
-
-
-
-
-
-
 	/*======================================
+	//show result of input number ref to random number
 	srand(time(NULL));
 	int RanNum = 5+(rand()%6);
 	cout<<RanNum<<endl;
