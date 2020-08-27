@@ -43,7 +43,7 @@ float ran()
 		if(mn==rn)
 		{
 			cout<<"random number is "<<rn<<endl;
-			cout<<"Yep same"<<endl;
+			cout<<"Correct!!"<<endl;
 			cout<<"You did it in "<<n<<" time!"<<endl;
 		}
 		else if(mn>rn)
