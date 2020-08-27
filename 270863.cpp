@@ -2,8 +2,8 @@
 #include<time.h>
 using namespace std;
 float ran();
-float exit();
-int main(void)
+float ex();
+int main()
 {
 	cout<<"GUESS NUMBER GAME!!"<<endl;
 	int mn=0;
@@ -17,7 +17,7 @@ int main(void)
 		ran();
 		break;
 	case 'N' :
-		exit();
+		ex();
 		break;
 	default :
 		cout<<"Please input Y, N : "<<endl;
@@ -34,6 +34,7 @@ float ran()
 	int rn =rand()%101;
 	int mn;
 	int n=0;
+	char c;
 	do
 	{
 		n=n+1;
@@ -53,11 +54,31 @@ float ran()
 			cout<<"wrong!!\nyour number is too low"<<endl;
 	}
 	while(mn!=rn);
-	cout<<"Do you want to play more? [Y/N] : "<<endl;
-	cin 
+	cout<<"Do you want to play more? [Y/N] : ";
+	cin>>c;
+	if(c=='Y')
+		ran();
+	else if(c=='N')
+		ex();
+	else
+		do{
+			cout<<"Please input Y, N : ";
+			cin>>c;
+			switch(c){
+			case 'Y' :
+				ran();
+				break;
+			case 'N' :
+				ex();
+				break;
+			default :
+			    break;}
+		}
+		while(c!='Y' && c!='N');
 	return(0);
 }
-float exit()
+
+float ex()
 {
 	cout<<"Exit Program"<<endl;
 	return(0);
