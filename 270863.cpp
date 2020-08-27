@@ -1,10 +1,34 @@
 #include<iostream>
 #include<time.h>
 using namespace std;
+float ran();
+float exit();
 int main(void)
 {
+	cout<<"GUESS NUMBER GAME!!"<<endl;
+	int mn=0;
+	int rn=0;
+	char d;
+	do{
+		cout<<"Do you want to play? [Y/N] : ";
+		cin>>d;
+	switch(d){
+	case 'Y' :
+		ran();
+		break;
+	case 'N' :
+		exit();
+		break;
+	default :
+		cout<<"Please input Y, N : "<<endl;
+		break;}
+	}
+	while(d!='Y' && d!='N');
+	return(0);
+}
 
-	/*
+float ran()
+{
 	//gues the random number
 	srand(time(NULL));
 	int rn =rand()%101;
@@ -29,7 +53,22 @@ int main(void)
 			cout<<"wrong!!\nyour number is too low"<<endl;
 	}
 	while(mn!=rn);
-	cout<<"Exit program"<<endl;
+	cout<<"Do you want to play more? [Y/N] : "<<endl;
+	cin 
+	return(0);
+}
+float exit()
+{
+	cout<<"Exit Program"<<endl;
+	return(0);
+}
+
+
+
+
+
+
+
 	/*======================================
 	//show result of input number ref to random number
 	srand(time(NULL));
@@ -51,5 +90,3 @@ int main(void)
 		cout<<"MyNum = RanNum"<<endl;
 	}
 	========================================*/
-	return(0);
-}
