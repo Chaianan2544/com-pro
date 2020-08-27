@@ -1,0 +1,36 @@
+#include<iostream>
+#include<time.h>
+using namespace std;
+int main(void)
+{
+	srand(time(NULL));
+	cout<<5+(rand()%6)<<endl;
+	return(0);
+}
+//=====================================
+#include<iostream>
+#include<time.h>
+using namespace std;
+int main(void)
+{
+	srand(time(NULL));
+	int RanNum = 5+(rand()%6);
+	cout<<RanNum<<endl;
+	int MyNum;
+	cout<<"Enter your number : ";
+	cin>>MyNum;
+	if(MyNum>RanNum)
+	{
+		cout<<"MyNum > RanNum"<<endl;
+	}
+	else if(MyNum<RanNum)
+	{
+		cout<<"MyNum < RanNum"<<endl;
+	}
+	else
+	{
+		cout<<"MyNum = RanNum"<<endl;
+	}
+	return(0);
+}
+//===================================

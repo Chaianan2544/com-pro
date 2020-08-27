@@ -1,0 +1,15 @@
+#include<iostream>
+#include<time.h>
+using namespace std;
+int main(void)
+{
+int i;
+	srand(time(NULL));
+	for(i=1;i>=20;i++){
+		cout<<(5+(rand()%6))<<"\t";
+		if(i%5==0){
+			cout<<("\n");
+		}
+	}
+	return(0);
+}
