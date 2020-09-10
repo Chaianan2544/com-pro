@@ -1,0 +1,5 @@
+float raduis,angle;
+const int width=9;
+cout<<"+"<<setfill('=')<<setw(44)<<"+"<<endl;
+cout<<": Angel : Sine : Cosine : Tangent :"<<endl;
+cout<<"+"<<setfill('=')<<setw(44)<<"+"<<endl;
