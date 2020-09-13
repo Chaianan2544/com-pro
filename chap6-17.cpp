@@ -4,7 +4,7 @@ template <class T>
 T Max( T a, T b);
 int main (){
 	int v1, v2;
-	cout << "Enter integer number. In";
+	cout << "Enter integer number.(two-number)\n";
 	cin >> v1 >> v2;
 	cout << "Max = " << Max<int> (v1,v2) << endl;
 	double d1, d2;
