@@ -7,8 +7,8 @@ int main (){
 	cout << "Average of data(integer) : ";
 	cout << Average<float, int > (intData, 10) << endl;
 	double doubleData[]= {0.0,1.0,2.0,3.0,4.0,5.0,6.0,7.0,8.0,9.0};
-		cout << "Average of data(double) : ";
-		cout << Average<double, double>(doubleData, 10) << endl;
+	cout << "Average of data(double) : ";
+	cout << Average<double, double>(doubleData, 10) << endl;
 	return (0) ;
 }
 template <class T, class P>
