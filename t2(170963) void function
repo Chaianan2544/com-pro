@@ -1,0 +1,41 @@
+#include<iostream>
+#include<string>
+using namespace std;
+void plus(int x, int y);
+void minus(int x, int y);
+void divide(int x, int y);
+void multi(int x, int y);
+int result;
+int main()
+{
+	int x=100,y=20;
+	plus(x,y);
+	cout<<"Plus\t = "<<result<<endl;
+	minus(x,y);
+	cout<<"Minus\t = "<<result<<endl;
+	multi(x,y);
+	cout<<"Multi\t = "<<result<<endl;
+	divide(x,y);
+	cout<<"Divide\t = "<<result<<endl;
+	return(0);
+}
+void plus(int x, int y)
+{
+	int sum=x+y;
+	result=sum;
+}
+void minus(int x, int y)
+{
+	int sum=x-y;
+	result=sum;
+}
+void divide(int x, int y)
+{
+	int sum=x/y;
+	result=sum;
+}
+void multi(int x,int y)
+{
+	int sum=x*y;
+	result=sum;
+}
