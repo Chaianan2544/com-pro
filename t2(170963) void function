@@ -22,6 +22,7 @@ int main()
 void plus(int x, int y)
 {
 	int sum=x+y;
+	//cout<<"plus\t = "<<sum<<endl; this don't need to declare global variable.
 	result=sum;
 }
 void minus(int x, int y)
