@@ -1,0 +1,27 @@
+#include <iostream>
+#include<string>
+using namespace std;
+//void swap(int &a, int &b)
+void swap(int a,int b)
+{
+	cout<<"inmain() before swap 2 number"<<endl;
+	cout<<"a= "<<a<<", address= "<<&a<<endl;
+	cout<<"b= "<<b<<", address= "<<&b<<endl;
+	int t=a;
+	a=b;
+	b=t;
+	cout<<"inmain() after swap 2 number"<<endl;
+	cout<<"a= "<<a<<", address= "<<&a<<endl;
+	cout<<"b= "<<b<<", address= "<<&b<<endl;
+}
+int main(void){
+	int a=5,b=9;
+	cout<<"inmain() before swap 2 number"<<endl;
+	cout<<"a= "<<a<<", address= "<<&a<<endl;
+	cout<<"b= "<<b<<", address= "<<&b<<endl;
+	swap(a,b);
+	cout<<"inmain() after swap 2 number"<<endl;
+	cout<<"a= "<<a<<", address= "<<&a<<endl;
+	cout<<"b= "<<b<<", address= "<<&b<<endl;
+	return(0);
+}
