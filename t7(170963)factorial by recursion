@@ -1,0 +1,20 @@
+#include<iostream>
+using namespace std;
+
+int fac(int num)
+{
+	if(num>1)
+	{
+		return(num*fac(num-1));
+	}
+	else
+	{
+		return(1);
+	}
+}
+
+int main(void)
+{
+	int result=fac(10);
+	cout<<"Factorial of 10 = "<<result<<endl;
+}
