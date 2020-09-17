@@ -1,0 +1,25 @@
+#include<iostream>
+using namespace std;
+
+int plus(int num1=10,int num2=20)
+{
+	return(num1+num2);
+}
+
+int main(void)
+{
+	cout<<"before input num1,num2"<<endl;
+	cout<<"result num1+num2 = "<<plus()<<endl;
+
+	int num1,num2;
+	cout<<"after input num1,num2"<<endl;
+	num1=333;
+	num2=444;
+
+	//cout<<"input num1 : ";
+	//cin>>num1;
+	//cout<<"input num2 : ";
+	//cin>>num2;
+
+	cout<<"result num1+num2 = "<<plus(num1,num2)<<endl;
+}
