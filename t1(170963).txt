@@ -34,7 +34,7 @@ int divide(int x, int y)
 	int sum=x/y;
 	return sum;
 }
-int multi(int x,int y) //x, y to receieve line 8 in same position
+int multi(int x,int y) 
 {
 	int sum=x*y;
 	return sum; //return value to calling position
