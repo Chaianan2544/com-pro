@@ -1,0 +1,49 @@
+#include<iostream>
+using namespace std;
+
+int num1,num2;
+
+void plus(int x, int y)
+{
+	int sum=x+y;
+	cout<<sum<<endl;
+}
+void minus(int x, int y)
+{
+	int sum=x-y;
+	cout<<sum<<endl;
+}
+void divide(int x, int y)
+{
+	int sum=x/y;
+	cout<<sum<<endl;
+}
+void multi(int x,int y)
+{
+	int sum=x*y;
+	cout<<sum<<endl;
+}
+
+
+
+
+int main(void)
+{
+	cout<<"input num1 : ";
+	cin>>num1;
+	cout<<"input num2 : ";
+	cin>>num2;
+
+	cout<<"result num1+num2 = ";
+	plus(num1,num2);
+
+	cout<<"result num1-num2 = ";
+	minus(num1,num2);
+
+	cout<<"result num1*num2 = ";
+	multi(num1,num2);
+
+	cout<<"result num1/num2 = ";
+	divide(num1,num2);
+
+}
