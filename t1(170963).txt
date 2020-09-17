@@ -9,8 +9,8 @@ int main()
 	cout<<result<<endl;
 	return(0);
 }
-int summation(int x,int y)
+int summation(int x,int y) //x, y to receieve line 8 in same position
 {
 	int sum=x*y;
-	return sum;
+	return sum; //return value to calling position
 }
