@@ -1,15 +1,40 @@
 #include<iostream>
 #include<string>
 using namespace std;
-int summation(int x, int y);
+int plus(int x, int y);
+int minus(int x, int y);
+int divide(int x, int y);
+int multi(int x, int y);
 int main()
 {
+	int x=100,y=20;
 	int result;
-	result=summation(5,10);
-	cout<<result<<endl;
+	result=plus(x,y);
+	cout<<"Plus = "<<result<<endl;
+	result=minus(x,y);
+	cout<<"Minus = "<<result<<endl;
+	result=divide(x,y);
+	cout<<"Divide = "<<result<<endl;
+	result=multi(x,y);
+	cout<<"Multi = "<<result<<endl;
 	return(0);
 }
-int summation(int x,int y) //x, y to receieve line 8 in same position
+int plus(int x, int y)
+{
+	int sum=x+y;
+	return sum;
+}
+int minus(int x, int y)
+{
+	int sum=x-y;
+	return sum;
+}
+int divide(int x, int y)
+{
+	int sum=x/y;
+	return sum;
+}
+int multi(int x,int y) //x, y to receieve line 8 in same position
 {
 	int sum=x*y;
 	return sum; //return value to calling position
