@@ -2,6 +2,16 @@
 using namespace std;
 int main()
 {
+	/* //การinputค่าเข้าไปในarray ตำแหน่งต่างๆ
+	int numray[10];
+	for(int i=0;i<10;i++)
+	{
+		cout<<"Input number to array index[i] : ";
+		cin>>numray[i];
+	}
+	*/
+	
+	//=====================
 	float numray[10]={20,10,32,35,84,75,66,97,68,99}; 
 	//=====================
 	float max=0;
