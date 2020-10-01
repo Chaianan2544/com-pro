@@ -10,8 +10,9 @@ int main()
 	int arrayLottery[row][col];
 	
 	int luckyNumber=rand()%100;
-	cout<<"LuckyNumber is "<<luckyNumber<<endl;//check luckynumber
+	//cout<<"LuckyNumber is "<<luckyNumber<<endl;//check luckynumber
 
+	int t=0;
 	for(int r=0;r<row;r++)
 	{
 		int c=0;
@@ -20,6 +21,7 @@ int main()
 		c++;//move the collumm of number to collumm of money
 		cout<<"Money of lottery "<<arrayLottery[r][c-1]<<" : ";
 		cin>>arrayLottery[r][c];
+		t=t+arrayLottery[r][1];
 	}
 
 	//check the results of lottery
@@ -46,6 +48,18 @@ int main()
 	//check money customer get from the result
 
 	cout<<"Total money you get is "<<reward*60<<" Baht"<<endl;
+	cout<<"Total money you have used is "<<t<<" Baht"<<endl;
+	int profit;
+	profit=(reward*60)-t;
+	if(profit>0)
+	{
+		cout<<"Your Profit gain is "<<(reward*60)-t<<" Baht"<<endl;
+	}
+	else
+	{
+		cout<<"You did not get any profit."<<endl;
+	}
+
 
 	return 0;
 }
